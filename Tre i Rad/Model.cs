@@ -13,11 +13,11 @@ namespace Tre_i_Rad
         // "" betyder ospelad ruta
         // "x" betyder att spelare-x har markerat
         // "o" betyder att spelare-o har markerat
-        private string[,] matrix = new string[4, 4];
+        private string[,] matrix = new string[3, 3];
 
         // indikerar vilken spelares tur som det är
         // true indikerar att det är spelare-x tur, annars spelare-o
-        private bool xTurn = true;
+        private bool xTurn = true; 
 
         private int xWins = 0;
         private int oWins = 0;
@@ -44,7 +44,7 @@ namespace Tre_i_Rad
         // markerar ruta med "x" eller "o" beroende på vemst tur det är
         public void Set(int row, int col)
         {
-            if (matrix[row, col] != "")
+            if (matrix[row, col] != "") // TODO
             {
                 return;   
             }
@@ -77,21 +77,6 @@ namespace Tre_i_Rad
         public bool IsO(int row, int col)
         {
             return matrix[row, col] == "o";
-        }
-
-        public bool Which(int row, int col)
-        {
-            // returnar 'true' om det är ett x i rutan
-            if (matrix[row, col] == "x")
-            {
-                return true;
-            }
-            else if (matrix[row, col] == "o")
-            {
-                return false;
-            }
-
-            return false;
         }
 
         // true om x är vinnare

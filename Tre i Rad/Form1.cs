@@ -61,7 +61,7 @@ namespace Tre_i_Rad
             // Tredje raden
             if (row == 3 && col == 1) { bottomleft.Image = pic; }
             if (row == 3 && col == 2) { bottom.Image = pic; }
-            if (row == 3 && col == 3) { bottomleft.Image = pic; }
+            if (row == 3 && col == 3) { bottomright.Image = pic; }
         }
 
         private void Clicked(int row, int col)

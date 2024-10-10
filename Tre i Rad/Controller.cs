@@ -56,11 +56,11 @@ namespace Tre_i_Rad
                 {
                     // Om 'Which' är true så sätts pictureboxen till 'X'
                     // annars sätts den till 'O'
-                    if (model.Which(row, col))
+                    if (model.IsX(row, col))
                     {
                         Form1.Set(row, col, images[1]);
                     }
-                    else
+                    else if (model.IsO(row, col))
                     {
                         Form1.Set(row, col, images[2]);
                     }
