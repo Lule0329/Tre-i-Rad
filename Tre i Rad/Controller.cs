@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Tre_i_Rad
 {
@@ -38,6 +39,10 @@ namespace Tre_i_Rad
             {
                 oWins++;
             }
+            else if (model.IsGameOver())
+            {
+
+            }
         }
 
         public void Click(int row, int col)
@@ -67,7 +72,18 @@ namespace Tre_i_Rad
                 }
             }
         }
-        
+
+        public void ResetBoard()
+        {
+            for (int col = 0; col <= 2; col++)
+            {
+                for (int row = 0; row <= 2; row++)
+                {
+                    Form1.Set(row, col, images[0]);
+                }
+            }
+        }
+
         public string GetXWins()
         {
             return $"X Wins: {xWins}";

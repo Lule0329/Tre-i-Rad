@@ -44,7 +44,7 @@ namespace Tre_i_Rad
         // markerar ruta med "x" eller "o" beroende på vemst tur det är
         public void Set(int row, int col)
         {
-            if (matrix[row, col] != "") // TODO
+            if (matrix[row, col] != "") 
             {
                 return;   
             }
