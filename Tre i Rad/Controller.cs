@@ -31,17 +31,20 @@ namespace Tre_i_Rad
 
         public void Winner()
         {
+            
             if (model.IsWinnerX())
             {
                 xWins++;
+                ResetBoard();
             }
             else if (model.IsWinnerO())
             {
                 oWins++;
+                ResetBoard();
             }
             else if (model.IsGameOver())
             {
-
+                ResetBoard();
             }
         }
 
@@ -71,6 +74,9 @@ namespace Tre_i_Rad
                     }
                 }
             }
+
+            Winner();
+            Form1.UpdateBoard();
         }
 
         public void ResetBoard()

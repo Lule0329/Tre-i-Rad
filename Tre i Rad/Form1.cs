@@ -25,9 +25,8 @@ namespace Tre_i_Rad
             this.controller = controller;
         }
 
-        private void UpdateBoard()
+        public void UpdateBoard()
         {
-            controller.Winner();
             xWins.Text = controller.GetXWins();
             oWins.Text = controller.GetOWins();
         }
